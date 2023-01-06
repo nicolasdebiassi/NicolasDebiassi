@@ -1,0 +1,140 @@
+.contacto{
+    background-color: var(--primary-color);
+    color: var(--text-color-inverse);
+    font-size: 18px;
+    border-radius: 14px;
+    padding: 25px;
+    display: grid;
+    gap: 25px;
+}
+
+.contacto p,
+.contacto h2,
+.contacto ul {
+    margin: 0;
+    padding: 0;
+}
+
+.contacto-title{
+    font-size: 30px;
+    font-size: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contacto-details,
+.contacto-form {
+    display: grid;
+    gap: 20px;
+}
+
+.contacto-details-group ,
+.contacto-form-group {
+    display: grid;
+    gap: 3px;
+}
+
+.contact-label {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.contacto-form-input,
+.contacto-form textarea {
+    border-radius: 7px;
+    border: none;
+    height: 30px;
+    padding: 5px 10px;
+
+}
+
+.contacto-form textarea {
+    height: auto;
+    resize: vertical;
+
+}
+
+.contacto-form-submit {
+    width: 100%;
+    height: 50px;
+    background-color: var(--text-color);
+    border-radius: 7px;
+    color: var(--text-color-inverse);
+    border: 1px solid var(--theme-color);
+
+    cursor: pointer;
+}
+
+.contacto-form-submit:hover {
+    box-shadow: 0 0 14px var(--secundary-color);
+}
+
+.social-list { 
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    border: none;
+    background: none;
+}
+
+.logo-social:hover {
+    box-shadow: 0 0 14px var(--secundary-color);
+    filter: drop-shadow(0 0 14px var(--secundary-color));
+}
+
+@media (min-width:950px) {
+    .contacto {
+        font-size: 20px;
+        padding: 70px;
+        max-width: 980px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .contacto-title {
+        font-size: 35px;
+        text-align: left;
+
+    }
+
+    .social-list {       
+        justify-content: flex-start;        
+    }
+
+    .social-list img {
+        height: 35px;
+    }
+
+    .contacto-title {
+        grid-area: title;
+    }
+
+    .contacto-details {
+        grid-area: details;
+    }
+
+    .contacto-form {
+        grid-area: form;
+    }
+
+    .social {
+        grid-area: social;
+    }
+
+    .contacto {
+        display: grid;
+        grid:
+        "title  form" auto
+        "details  form" 1fr
+        "social  form" auto / 
+        1fr  1fr ;
+        align-items: start;
+    }
+
+    .logo-social {
+        width: 40px;
+        height: 50px;
+        padding: 4px;
+       
+    }
+}
